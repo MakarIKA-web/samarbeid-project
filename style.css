@@ -1,12 +1,13 @@
 @font-face {
     font-family: 'Projekt Blackbird';
-    src: url('css/fonts/Projekt\ Blackbird\ v2.otf') format('opentype');
+    src: url('css/fonts/Projekt\ Blackbird\ v2.otf');
     font-weight: normal;
     font-style: normal;
 }
 
 * {
     font-family: 'Projekt Blackbird', sans-serif;
+    font-weight: 100;
 }
 
 body {
@@ -14,11 +15,37 @@ body {
 }
 
 main {
-    width: 20%;
+    width: 26%;
     margin: auto;
 }
 
-.ticket {border-radius: 10px;
+.ticket {
+    border-radius: 10px;
     background-color: white;
     height: 700px;
 }
+
+.content {
+    height: 600px;
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    padding-top: 20px;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.line {
+    border-top: 2px dashed black; /* Creates a dashed line */
+    width: 100%; /* Adjust width as needed */
+    margin: 20px 0; /* Spacing above and below */
+  }
+  
