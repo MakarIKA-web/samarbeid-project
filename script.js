@@ -13,3 +13,7 @@ function calculateTotalPrice(liters) {
     if (liters > 0 && liters < 5) {
         return 'vi selger ikke så små kvanta bensin';
     }
+
+    let totalprice = liters * pricePerLiter;
+    let discount = 0;
+    
