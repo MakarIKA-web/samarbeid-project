@@ -1,28 +1,44 @@
-function calculateTotalPrice(liters, pricePerLiter = 15, vatRate = 0.25) {
-    if (liters <= 0) {
-        return 'Vi selger ikke så små kvanta bensin.';
-    }
+window.onload = oppstart;
 
-    let totalPrice = liters * pricePerLiter;
-    let discount = 0;
-
-    if (liters > 50) {
-        discount = totalPrice * 0.10;
-        totalPrice -= discount;
-    }
-
-    const vat = totalPrice * vatRate;
-    totalPrice += vat;
-
-    return {
-        liters: liters,
-        pricePerLiter: pricePerLiter,
-        discount: discount,
-        vat: vat,
-        totalPrice: totalPrice
-    };
+function oppstart(){
+    document.querySelector("#regnUtKnapp").onclick = beregn;
+    document.querySelector("#nullstillKnapp").onclick = nullstill;
 }
 
-// Eksempel på bruk
-const result = calculateTotalPrice(60);
-console.log(result);
+function beregn(){
+    let liter = document.querySelector("#liter").value;
+    let pris = 21.35;
+
+    if(liter > 80){
+        document.querySelector("#utskrift").innerHTML = "Tanken din rommer ikke så mye";
+    }
+
+    else if((liter > 0) & (liter < 5)){
+        document.querySelector("#utskrift").innerHTML = "Vi selger ikke så små kvanta";
+    }
+
+    else if(liter<=0){ 
+        document.querySelector("#utskrift").innerHTML = "Skriv inn et positivt tall større enn 5"
+    }
+
+    else if(liter > 50){
+        let betaling = liter * pris * 0.9;
+        let rabatt = liter * pris *0.1;
+        let mva_faktor = 0.23;
+        let mva = (betaling/(1+mva_faktor)).toFixed(2);
+        document.querySelector("#utskrift").innerHTML = "Du har fyllt " + liter + " liter bensin til "+ pris + " kr literen.<br>Du må betale kr  " + betaling +". Rabatten din er på kr " +rabatt + ".<br> Mva utgjør kr " + mva + " av summen du betaler.";
+
+    }
+
+    else{
+        let betaling = liter * pris;
+        let mva_faktor = 0.23;
+        let mva = (betaling/(1+mva_faktor)).toFixed(2); 
+        document.querySelector("#utskrift").innerHTML = "Du har fyllt " + liter + " liter bensin til "+ pris + " kr literen. <br>Du må betale kr " + betaling + ".<br> Mva utgjør kr " + mva + " av summen du betaler.";
+    }
+}
+
+function nullstill(){
+    document.querySelector("#utskrift").innerHTML ="";
+    document.querySelector("#liter").value ="";
+}
