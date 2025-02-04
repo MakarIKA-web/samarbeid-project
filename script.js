@@ -33,3 +33,13 @@ function calculateTotalPrice(liters) {
     };
 }
 
+document.getElementById('fyllBensin').addEventListener('click', function() {
+    const liters = parseFloat(document.getElementById('bensinMengde').value);
+    const result = calculateTotalPrice(liters);
+    document.getElementById('utskrift').textContent = JSON.stringify(result, null, 2);
+});
+
+document.getElementById('nullstill').addEventListener('click', function() {
+    document.getElementById('bensinMengde').value = '';
+    document.getElementById('utskrift').textContent = '';
+});
