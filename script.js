@@ -15,15 +15,15 @@ function fyllBensin() {
         utskrift = "Tanken din rommer ikke så mye";
     } else if (bensinMengde > 0 && bensinMengde < 5) {
         utskrift = "Vi selger ikke så små kvanta";
-        if (liters > 50) {
-            discount = totalPrice * 0.10;
-            totalPrice -= discount;
-        }
     } else if (bensinMengde <= 0) {
         utskrift = "Ugyldig mengde";
     } else {
         let totalPris = bensinMengde * pris;
         utskrift = `Du må betale ${totalPris.toFixed(2)} kr for ${bensinMengde} liter bensin.`;
+    }
+    if (liters > 50) {
+        discount = totalPrice * 0.10;
+        totalPrice -= discount;
     }
 
     document.querySelector("#utskrift").innerHTML = utskrift;
