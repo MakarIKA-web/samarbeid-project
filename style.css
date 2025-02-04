@@ -15,14 +15,14 @@ body {
 }
 
 main {
-    width: 26%;
+    width: 45%;
     margin: auto;
 }
 
 .ticket {
     border-radius: 10px;
     background-color: white;
-    height: 40%;
+    height: 20%;
 }
 
 .content {
