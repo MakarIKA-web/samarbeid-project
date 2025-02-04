@@ -22,10 +22,6 @@ function fyllBensin() {
         let totalPris = bensinMengde * pris;
         utskrift = `Du må betale ${totalPris.toFixed(2)} kr for ${bensinMengde} liter bensin.`;
     }
-    if (liters > 50) {
-        discount = totalPrice * 0.10;
-        totalPrice -= discount;
-}
 }
 
     document.querySelector("#utskrift").innerHTML = utskrift;
