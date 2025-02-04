@@ -8,3 +8,17 @@
 * {
     font-family: 'Projekt Blackbird', sans-serif;
 }
+
+body {
+    background-color: black;
+}
+
+main {
+    width: 20%;
+    margin: auto;
+}
+
+.ticket {border-radius: 10px;
+    background-color: white;
+    height: 700px;
+}
