@@ -15,7 +15,15 @@ function calculateTotalPrice(liters) {
     }
 
     let totalPrice = liters * pricePerLiter;
-    let discount = 0;
+    let discount = 0;    document.getElementById('fyllBensin').addEventListener('click', function() {
+        const liters = parseFloat(document.getElementById('bensinMengde').value);
+        if (isNaN(liters) || liters <= 0) {
+            document.getElementById('utskrift').textContent = 'Ugyldig mengde bensin';
+            return;
+        }
+        const result = calculateTotalPrice(liters);
+        document.getElementById('utskrift').textContent = JSON.stringify(result, null, 2);
+    });
 
     if (liters > 50) {
         discount = totalPrice * 0.10;
