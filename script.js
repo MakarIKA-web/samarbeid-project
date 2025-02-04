@@ -13,13 +13,14 @@ function fyllBensin() {
 
     if (bensinMengde > 80) {
         utskrift = "Tanken din rommer ikke så mye";
-    } else if (bensinMengde > 0 && bensinMengde < 5) {
+    }
+    else if (bensinMengde > 0 && bensinMengde < 5) {
         utskrift = "Vi selger ikke så små kvanta";
     } else if (bensinMengde <= 0) {
         utskrift = "Ugyldig mengde";
     } else {
-        let totalPris = bensinMengde * pris;
-        utskrift = `Du må betale ${totalPris} kr for ${bensinMengde} liter bensin.`;
+        let totalPris = bensinMengde * pris + prosent;
+        utskrift = f`Du må betale ${totalPris} kr for ${bensinMengde} liter bensin.`;
     }
 
     document.querySelector("#utskrift").innerHTML = utskrift;
