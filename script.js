@@ -6,3 +6,6 @@ function calculateTotalPrice(liters) {
         return 'Vi tar ikke bensin i retur.';
     }
 
+    if (liters <80) {
+        return 'tanken er ikke så stor';
+    }
