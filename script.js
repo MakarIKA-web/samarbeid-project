@@ -16,4 +16,6 @@ function calculateTotalPrice(liters) {
 
     let totalprice = liters * pricePerLiter;
     let discount = 0;
-    
+
+    if (liters > 50) {
+        discount = totalprice * 0.10;
