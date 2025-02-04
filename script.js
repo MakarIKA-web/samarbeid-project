@@ -7,12 +7,12 @@ function oppstart(){
 
 function fyllBensin(){
     let bensinMengde = document.querySelector("#bensinMengde").value;
-    let pris = 21.35;
+    let pris = 20;
 
     if(bensinMengde > 80){
         document.querySelector("#utskrift").innerHTML = "Tanken din rommer ikke så mye";
     } else if(bensinMengde > 0 && bensinMengde < 5){
-        document.querySelector("#utskrift").innerHTML = "Vi selger ikke så små kvanta";
+        document.querySelector("#utskrift").innerHTML = "Vi selger ikke så små lite kvanta";
     } else if(bensinMengde <= 0){ 
         document.querySelector("#utskrift").innerHTML = "Ugyldig mengde";
     } else {
