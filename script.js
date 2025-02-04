@@ -19,7 +19,7 @@ function fyllBensin() {
         utskrift = "Ugyldig mengde";
     } else {
         let totalPris = bensinMengde * pris;
-        utskrift = `Du må betale ${totalPris.toFixed} kr for ${bensinMengde} liter bensin.`;
+        utskrift = `Du må betale ${totalPris.toFixed(2)} kr for ${bensinMengde} liter bensin.`;
     }
 
     document.querySelector("#utskrift").innerHTML = utskrift;
