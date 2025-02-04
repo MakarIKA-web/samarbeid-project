@@ -21,3 +21,15 @@ function calculateTotalPrice(liters) {
         discount = totalPrice * 0.10;
         totalPrice -= discount;
     }
+    const vat = totalPrice * vatRate;
+    totalPrice += vat;
+
+    return {
+        liters: liters,
+        pricePerLiter: pricePerLiter,
+        discount: discount,
+        vat: vat,
+        totalPrice: totalPrice
+    };
+}
+
