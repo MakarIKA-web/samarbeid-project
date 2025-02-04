@@ -9,3 +9,7 @@ function calculateTotalPrice(liters) {
     if (liters <80) {
         return 'tanken er ikke så stor';
     }
+
+    if (liters > 0 && liters < 5) {
+        return 'vi selger ikke så små kvanta bensin';
+    }
