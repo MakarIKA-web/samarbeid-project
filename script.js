@@ -30,4 +30,4 @@ function fyllBensin() {
     }
 }
 
-    document.querySelector("#utskrift").innerHTML = utskrift;
+    document.querySelector("#utskrift").innerHTML
