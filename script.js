@@ -26,8 +26,8 @@ function fyllBensin() {
     }
      else {
         let totalPris = bensinMengde * pris;
-        utskrift = `Du må betale ${totalPris} kr for ${bensinMengde} liter bensin.`;
+        document.querySelector("#utskrift").innerHTML = `Du må betale ${totalPris} kr for ${bensinMengde} liter bensin.`;
     }
 }
 
-    document.querySelector("#utskrift").innerHTML
+    
