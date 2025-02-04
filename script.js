@@ -25,4 +25,3 @@ function fyllBensin() {
 }
 
     document.querySelector("#utskrift").innerHTML = utskrift;
-}
