@@ -33,11 +33,11 @@ function calculateTotalPrice(liters) {
     totalPrice += vat;
 
     return {
-        liters: "sliters",
-        pricePerLiter: "pricePerLiter",
-        discount: "discount",
-        vat: "vat",
-        totalPrice: "totalPrice"
+        liters: liters,
+        pricePerLiter: pricePerLiter,
+        discount: discount,
+        vat: vat,
+        totalPrice: totalPrice
     };
 }
 
