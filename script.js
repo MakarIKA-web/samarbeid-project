@@ -20,15 +20,10 @@ function fyllBensin() {
     }
 
     else if(liter > 50){
-        let betaling = liter * pris * 0.9;
-        let rabatt = liter * pris *0.1;
-        let mva_faktor = 0.23;
-        let mva = (betaling/(1+mva_faktor)).toFixed(2);
-        document.querySelector("#utskrift").innerHTML = "Du har fyllt " + liter + " liter bensin til "+ pris + " kr literen.<br>Du må betale kr  " + betaling +". Rabatten din er på kr " +rabatt + ".<br> Mva utgjør kr " + mva + " av summen du betaler.";
-
+        let betaling = bensinMengde * pris;
+        let rabatt = bensinMengde * pris *0.1;
+        document.querySelector("#utskrift").innerHTML = "Du har fyllt " + bensinMengde + " liter bensin til "+ pris + " kr literen.<br>Du må betale kr  " + betaling +". Rabatten din er på kr " +rabatt + ".<br> Mva utgjør kr " + mva + " av summen du betaler.";
     }
-
-
      else {
         let totalPris = bensinMengde * pris;
         utskrift = `Du må betale ${totalPris} kr for ${bensinMengde} liter bensin.`;
