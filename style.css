@@ -44,6 +44,8 @@ input {
 }
 
 .line {
+    position: absolute;
+    left: 0px;
     border-top: 2px dashed black; /* Creates a dashed line */
     width: 100%; /* Adjust width as needed */
     margin: 20px 0; /* Spacing above and below */
