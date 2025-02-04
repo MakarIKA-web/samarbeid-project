@@ -22,7 +22,7 @@ function fyllBensin() {
     else if(bensinMengde > 50){
         let betaling = bensinMengde * pris;
         let rabatt = bensinMengde * pris - (pris * 0.1);
-        document.querySelector("#utskrift").innerHTML = "Du må betale kr  " + betaling +". Rabatten din er på kr " + rabatt + ".";
+        document.querySelector("#utskrift").innerHTML = "Du må betale kr  " + betaling +"for" + bensinMengde + "liter bensin. <br>" + "Rabatten din er på kr " + rabatt + ".";
     }
      else {
         let totalPris = bensinMengde * pris;
