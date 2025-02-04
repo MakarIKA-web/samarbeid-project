@@ -33,12 +33,16 @@ main {
 
 h1 {
     padding-top: 20px;
+    margin-bottom: 0px;
+    font-size: 60px;
 }
 
 input {
+    font-size: 20px;
+    margin-top: 20px;
     height: 30px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 1px solid black;
     margin-bottom: 10px;
 }
@@ -51,3 +55,22 @@ input {
     margin: 20px 0; /* Spacing above and below */
   }
   
+
+label {
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+
+button {
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid black;
+    height: 30px;
+}
+
+button:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
