@@ -6,24 +6,7 @@ function calculateTotalPrice(liters) {
         return 'Vi tar ikke bensin i retur.';
     }
 
-    if (liters > 80) {    document.getElementById('fyllBensin').addEventListener('click', function() {
-        const liters = parseFloat(document.getElementById('bensinMengde').value);
-        if (isNaN(liters) || liters <= 0) {
-            document.getElementById('utskrift').textContent = 'Ugyldig mengde bensin';
-            return;
-        }
-        const result = calculateTotalPrice(liters);
-        if (result && Object.keys(result).length > 0) {
-            document.getElementById('utskrift').textContent = JSON.stringify(result, null, 2);
-        } else {
-            document.getElementById('utskrift').textContent = 'Ingen gyldig data å vise';
-        }
-    });
-    
-    document.getElementById('nullstill').addEventListener('click', function() {
-        document.getElementById('bensinMengde').value = '';
-        document.getElementById('utskrift').textContent = '';
-    });
+    if (liters > 80) {
         return 'Tanken er ikke så stor.';
     }
 
