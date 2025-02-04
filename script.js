@@ -18,6 +18,12 @@ function fyllBensin() {
     } else if (bensinMengde <= 0) {
         utskrift = "Ugyldig mengde";
     }
+    
+    else if (bensinMengde > 50) {
+        let rabatt = totalPris * 0.10;
+        totalPris -= rabatt;
+    }
+
      else {
         let totalPris = bensinMengde * pris;
         utskrift = `Du må betale ${totalPris.toFixed(2)} kr for ${bensinMengde} liter bensin.`;
