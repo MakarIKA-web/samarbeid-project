@@ -20,7 +20,7 @@ function fyllBensin() {
     }
      else {
         let totalPris = bensinMengde * pris;
-        utskrift = `Du må betale ${totalPris.toFixed(2)} kr for ${bensinMengde} liter bensin.`;
+        utskrift = `Du må betale ${totalPris} kr for ${bensinMengde} liter bensin.`;
     }
 }
 
