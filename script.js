@@ -1,11 +1,11 @@
 window.onload = oppstart;
 
 function oppstart(){
-    document.querySelector("#regnUtKnapp").onclick = beregn;
+    document.querySelector("#fyllBensinKnapp").onclick = fyllBensin;
     document.querySelector("#nullstillKnapp").onclick = nullstill;
 }
 
-function beregn(){
+function fyllBensin(){
     let liter = document.querySelector("#liter").value;
     let pris = 21.35;
 
