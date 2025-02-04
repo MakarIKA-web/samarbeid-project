@@ -17,6 +17,7 @@ function fyllBensin() {
         utskrift = "Vi selger ikke så små kvanta";
     } else if (bensinMengde <= 0) {
         utskrift = "Ugyldig mengde";
+<<<<<<< HEAD
     }
     
     else if (bensinMengde > 50) {
@@ -25,10 +26,12 @@ function fyllBensin() {
     }
 
      else {
+=======
+    } else {
+>>>>>>> 091dbdd14cf5d5d82ecef86c2357c9c855fa3512
         let totalPris = bensinMengde * pris;
         utskrift = `Du må betale ${totalPris.toFixed(2)} kr for ${bensinMengde} liter bensin.`;
     }
-}
 
     document.querySelector("#utskrift").innerHTML = utskrift;
 }
